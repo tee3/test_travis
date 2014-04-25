@@ -1,0 +1,22 @@
+import os ;
+
+# Host compilers
+
+if [ os.name ] = NT
+{
+  using msvc ;
+#  using gcc ;
+  using clang ;
+}
+else if [ os.name ] = LINUX
+{
+#  using msvc ;
+  using gcc ;
+  using clang ;
+}
+else if [ os.name ] = MACOSX
+{
+#  using msvc ;
+  using darwin ;
+  using clang ;
+}

@@ -1,0 +1,3 @@
+import testing ;
+
+run test_travis.cpp ;
