@@ -1,7 +1,5 @@
-language: cpp
-compiler:
-  - gcc
-  - clang
+language: python
+python:
+  - "2.7"
 script:
-  - make
-  - ./test_travis
+  - "true"
