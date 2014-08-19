@@ -1,7 +1,19 @@
-language: cpp
-compiler:
-  - gcc
-  - clang
+env:
+  - VARIANT=debug
+  - VARIANT=release
+before_install:
+  - echo "before_install -------------------"
+  - echo "could do stuff with git submodules, etc. here"
+install:
+  - echo "install --------------------------"
+before_script:
+  - echo "before_script" -------------------------------"
 script:
-  - make
-  - ./test_travis
+  - echo "script ${VARIANT} ----------------------------"
+  - true
+after_script:
+  - echo "after_script ------------------------------"
+after_success:
+  - echo "after_success ${TRAVIS_TEST_RESULT}  -----------------------"
+after_failure:
+  - echo "after_failure ${TRAVIS_TEST_RESULT}  -----------------------"
